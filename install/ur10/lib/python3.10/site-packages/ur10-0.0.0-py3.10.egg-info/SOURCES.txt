@@ -1,0 +1,17 @@
+package.xml
+setup.cfg
+setup.py
+../../build/ur10/ur10.egg-info/PKG-INFO
+../../build/ur10/ur10.egg-info/SOURCES.txt
+../../build/ur10/ur10.egg-info/dependency_links.txt
+../../build/ur10/ur10.egg-info/entry_points.txt
+../../build/ur10/ur10.egg-info/requires.txt
+../../build/ur10/ur10.egg-info/top_level.txt
+../../build/ur10/ur10.egg-info/zip-safe
+resource/ur10
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py
+ur10/__init__.py
+ur10/python.py
+ur10/test.py

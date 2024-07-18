@@ -1,0 +1,68 @@
+<mujoco model="ur10e scene">
+  <include file="ur10e.xml"/>
+
+  <extension>
+    <plugin plugin="mujoco.elasticity.solid"/>
+  </extension>
+
+  <statistic center="0.4 0 0.4" extent="1"/>
+
+  <visual>
+    <headlight diffuse="0.6 0.6 0.6" ambient="0.1 0.1 0.1" specular="0 0 0"/>
+    <rgba haze="0.15 0.25 0.35 1"/>
+    <global azimuth="120" elevation="-20"/>
+  </visual>
+
+  <asset>
+    <texture type="skybox" builtin="gradient" rgb1="0.3 0.5 0.7" rgb2="0 0 0" width="512" height="3072"/>
+    <texture type="2d" name="groundplane" builtin="checker" mark="edge" rgb1="0.2 0.3 0.4" rgb2="0.1 0.2 0.3"
+      markrgb="0.8 0.8 0.8" width="300" height="300"/>
+    <material name="groundplane" texture="groundplane" texuniform="true" texrepeat="5 5" reflectance="0.2"/>
+
+    <!-- 添加箱子的材质 -->
+    <material name="workpiece_material" rgba="0.8 0.1 0.1 1" specular="0.5" shininess="0.25"/>
+
+  </asset>
+
+  <worldbody>
+    <light pos="0 0 1.5" dir="0 0 -1" directional="true"/>
+    <geom name="floor" size="0 0 0.05" type="plane" material="groundplane" condim='3'/>
+
+    <camera name="camera" pos="-3.572 -1.851 2.229" xyaxes="0.492 -0.870 0.000 0.425 0.241 0.872"/>
+
+    <!-- 添加一个有质量的箱子 -->
+    <body name="workpiece" pos="1.5 0.0 0.5">
+      <joint name="workpiece_joint" type="free"/>
+      <geom name="workpiece" type="box" size="0.5 0.5 0.5" material="workpiece_material" friction="0.8 0.005 0.0001"/>
+      <inertial pos="0.0 0.0 0.0" mass="81.25" diaginertia="40.885 40.885 40.885"/>
+    </body>
+
+    <!-- <body name="work" pos="0 -2 1">
+      <joint name="work_joint" type="free"/>
+      <inertial pos="0.0 0.0 0.0" mass="1.25" diaginertia="0.885 0.885 0.885"/>
+      <flexcomp type="cylinder" count="5 5 5" spacing=".05 .05 .01" 
+                radius=".0" rgba="0 .7 .7 1" name="softbody" dim="3" mass="5">
+          <contact condim="3" solref="0.01 1" solimp=".95 .99 .0001" selfcollide="none"/>
+          <edge damping="1"/>
+          <plugin plugin="mujoco.elasticity.solid">
+            <config key="poisson" value="0.2"/>
+            <config key="young" value="5e4"/>
+          </plugin>
+      </flexcomp>
+    </body> -->
+
+  </worldbody>
+
+  <contact>
+      <pair geom1="left wheel" geom2="floor" condim="6" friction="0.99 0.99 0.005 0.0001 0.0001"/>
+      <pair geom1="right wheel" geom2="floor" condim="6" friction="0.99 0.99 0.005 0.0001 0.0001"/>
+      <!-- <pair geom1="grinding_tool" geom2="workpiece" condim="6" friction="0.91 0.91 0.005 0.0001 0.0001"/> -->
+  </contact>
+
+  <!-- <sensor>
+    <position name="box_pos" joint="workpiece_joint"/>
+  </sensor> -->
+
+<!-- qpos是从先定义到后定义排列的，目前的排列为：底盘位姿（7），轮子角度（2），关节角度（6），末端工具角度（1），工件位姿（7） -->
+
+</mujoco>

@@ -1,0 +1,38 @@
+[0.424s] Invoking command in '/home/zzy/UR10_sim/src/ur10': CONDA_PROMPT_MODIFIER=(mujoco_env) PYTHONPATH=/home/zzy/UR10_sim/build/ur10/prefix_override:/home/zzy/UR10_sim/install/ur10/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/ur10 build --build-base /home/zzy/UR10_sim/build/ur10/build install --record /home/zzy/UR10_sim/build/ur10/install.log --single-version-externally-managed
+[0.565s] running egg_info
+[0.566s] creating ../../build/ur10/ur10.egg-info
+[0.566s] writing ../../build/ur10/ur10.egg-info/PKG-INFO
+[0.566s] writing dependency_links to ../../build/ur10/ur10.egg-info/dependency_links.txt
+[0.566s] writing entry points to ../../build/ur10/ur10.egg-info/entry_points.txt
+[0.566s] writing requirements to ../../build/ur10/ur10.egg-info/requires.txt
+[0.566s] writing top-level names to ../../build/ur10/ur10.egg-info/top_level.txt
+[0.566s] writing manifest file '../../build/ur10/ur10.egg-info/SOURCES.txt'
+[0.567s] reading manifest file '../../build/ur10/ur10.egg-info/SOURCES.txt'
+[0.567s] writing manifest file '../../build/ur10/ur10.egg-info/SOURCES.txt'
+[0.567s] running build
+[0.567s] running build_py
+[0.567s] creating /home/zzy/UR10_sim/build/ur10/build
+[0.568s] creating /home/zzy/UR10_sim/build/ur10/build/lib
+[0.568s] creating /home/zzy/UR10_sim/build/ur10/build/lib/ur10
+[0.568s] copying ur10/python.py -> /home/zzy/UR10_sim/build/ur10/build/lib/ur10
+[0.568s] copying ur10/__init__.py -> /home/zzy/UR10_sim/build/ur10/build/lib/ur10
+[0.568s] running install
+[0.568s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[0.568s]   warnings.warn(
+[0.568s] running install_lib
+[0.568s] creating /home/zzy/UR10_sim/install/ur10/lib/python3.10/site-packages/ur10
+[0.568s] copying /home/zzy/UR10_sim/build/ur10/build/lib/ur10/python.py -> /home/zzy/UR10_sim/install/ur10/lib/python3.10/site-packages/ur10
+[0.568s] copying /home/zzy/UR10_sim/build/ur10/build/lib/ur10/__init__.py -> /home/zzy/UR10_sim/install/ur10/lib/python3.10/site-packages/ur10
+[0.568s] byte-compiling /home/zzy/UR10_sim/install/ur10/lib/python3.10/site-packages/ur10/python.py to python.cpython-310.pyc
+[0.569s] byte-compiling /home/zzy/UR10_sim/install/ur10/lib/python3.10/site-packages/ur10/__init__.py to __init__.cpython-310.pyc
+[0.569s] running install_data
+[0.569s] creating /home/zzy/UR10_sim/install/ur10/share/ament_index
+[0.569s] creating /home/zzy/UR10_sim/install/ur10/share/ament_index/resource_index
+[0.569s] creating /home/zzy/UR10_sim/install/ur10/share/ament_index/resource_index/packages
+[0.569s] copying resource/ur10 -> /home/zzy/UR10_sim/install/ur10/share/ament_index/resource_index/packages
+[0.569s] copying package.xml -> /home/zzy/UR10_sim/install/ur10/share/ur10
+[0.569s] running install_egg_info
+[0.570s] Copying ../../build/ur10/ur10.egg-info to /home/zzy/UR10_sim/install/ur10/lib/python3.10/site-packages/ur10-0.0.0-py3.10.egg-info
+[0.570s] running install_scripts
+[0.583s] writing list of installed files to '/home/zzy/UR10_sim/build/ur10/install.log'
+[0.597s] Invoked command in '/home/zzy/UR10_sim/src/ur10' returned '0': CONDA_PROMPT_MODIFIER=(mujoco_env) PYTHONPATH=/home/zzy/UR10_sim/build/ur10/prefix_override:/home/zzy/UR10_sim/install/ur10/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/ur10 build --build-base /home/zzy/UR10_sim/build/ur10/build install --record /home/zzy/UR10_sim/build/ur10/install.log --single-version-externally-managed
