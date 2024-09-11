@@ -133,3 +133,9 @@ ERROR: could not create window
 Fri Jul 19 00:15:06 2024
 WARNING: Nan, Inf or huge value in QACC at DOF 0. The simulation is unstable. Time = 8.3460.
 
+Tue Jul 23 09:58:37 2024
+WARNING: Nan, Inf or huge value in QACC at DOF 0. The simulation is unstable. Time = 10.0520.
+
+Tue Jul 23 21:45:49 2024
+WARNING: Nan, Inf or huge value in QACC at DOF 0. The simulation is unstable. Time = 30.9360.
+
